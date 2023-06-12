@@ -1,4 +1,5 @@
 import {component$, useComputed$} from '@builder.io/qwik';
+import type {DocumentHead} from '@builder.io/qwik-city';
 import BlogPreview from '~/components/blog/blog-preview';
 import {getAllPosts} from '~/helpers/blog-helper';
 import type {TypeBlogDetails} from '~/types/type-blog-details';
@@ -45,3 +46,30 @@ export default component$(() => {
 		</div>
 	);
 });
+
+export const head: DocumentHead = {
+	title: 'Feldrise Blog',
+	meta: [
+		{
+			name: 'description',
+			content: 'Bienvenue sur le blog de Feldrise',
+		},
+		{
+			name: 'og:title',
+			content: 'Feldrise Blog',
+		},
+		{
+			name: 'og:description',
+			content: 'Bienvenue sur le blog de Feldrise',
+		},
+		{
+			name: 'og:url',
+			content: 'https://feldrise.com/blog',
+		},
+		{
+			name: 'og:image',
+			content: 'https://feldrise.com/logo-feldrise/icon-white-logo.png',
+		},
+
+	],
+};

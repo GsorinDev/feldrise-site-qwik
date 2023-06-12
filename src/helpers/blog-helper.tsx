@@ -1,10 +1,10 @@
-import {join} from 'path';
+// import {join} from 'path';
 import fs from 'fs';
 import type {TypeBlogDetails} from '~/types/type-blog-details';
 import matter from 'gray-matter';
 import type {TypeBlogMetaData} from '~/types/type-blog-metadata';
 
-const postsDirectory = join(process.cwd(), '_posts');
+const postsDirectory = process.cwd() + '/_posts';
 
 /**
  * Return the list of all posts slugs
@@ -21,7 +21,7 @@ export function getPostSlugs(): string[] {
  */
 export function getPostBySlug(slug: string): TypeBlogDetails {
 	const realSlug = slug.replace(/\.md$/, '');
-	const fullPath = join(postsDirectory, `${realSlug}.md`);
+	const fullPath = postsDirectory + `/${realSlug}.md`;
 	const fileContents = fs.readFileSync(fullPath, 'utf8');
 	const {data, content} = matter(fileContents);
 

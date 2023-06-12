@@ -20,11 +20,28 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-	title: 'Welcome to Qwik',
+	title: 'Feldrise - La solution CTO en Bretagne',
 	meta: [
 		{
 			name: 'description',
-			content: 'Qwik site description',
+			content: 'Feldrise est une agence digitale Bretonne proposant un accompagnement complet dans la réalisation technique de votre projet.',
 		},
+		{
+			name: 'og:title',
+			content: 'Feldrise - La solution CTO en Bretagne',
+		},
+		{
+			name: 'og:description',
+			content: 'Feldrise est une agence digitale Bretonne proposant un accompagnement complet dans la réalisation technique de votre projet.',
+		},
+		{
+			name: 'og:url',
+			content: 'https://feldrise.com',
+		},
+		{
+			name: 'og:image',
+			content: 'https://feldrise.com/logo-feldrise/icon-white-logo.png',
+		},
+
 	],
 };

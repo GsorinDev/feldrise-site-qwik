@@ -1,5 +1,4 @@
 import {component$, useSignal} from '@builder.io/qwik';
-import {LuMenu, LuX} from '@qwikest/icons/lucide';
 import cx from 'classnames';
 import CalendlyButton from './calendly-button';
 
@@ -44,7 +43,8 @@ export default component$(() => {
 							class="block"
 							onClick$={() => showSlider.value = true}
 						>
-							<LuMenu class="text-4xl" />
+							{/* eslint-disable-next-line max-len */}
+							<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16M4 6h16M4 18h16"/></svg>
 						</button>
 					</div>
 				</div>
@@ -59,7 +59,8 @@ export default component$(() => {
 					class="w-fit px-4 py-4"
 					onClick$={() => showSlider.value = false}
 				>
-					<LuX class="text-3xl" />
+					{/* eslint-disable-next-line max-len */}
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
 				</button>
 				{routes.map((route, index) =>
 					<a href={route.href} key={index} class={cx(

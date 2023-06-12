@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
-  theme: {
-    extend: {
-      colors: {
+	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+	theme: {
+		extend: {
+			colors: {
 				'neutral': '#1F1F1F',
 				'primary': '#AA33FF',
 				'primary-dark': '#860DDC',
@@ -27,30 +27,32 @@ module.exports = {
 			backgroundSize: {
 				'full': 'auto 100%',
 			},
-			// typography: () => ({
-			// 	dark: {
-			// 		css: {
-			// 			'color': 'white',
-			// 			'h1': {
-			// 				'color': 'white',
-			// 			},
-			// 			'h2': {
-			// 				'color': '#FF33DE',
-			// 			},
-			// 			'h3, h4': {
-			// 				'color': 'white',
-			// 			},
-			// 			'a': {
-			// 				'color': '#FF33DE',
-			// 			},
-			// 			'p , code , strong, li': {
-			// 				'color': 'white',
-			// 				'font-family': 'Lato, Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
-			// 			},
-			// 		},
-			// 	},
-			// }),
-    },
-  },
-  plugins: [],
+			typography: () => ({
+				dark: {
+					css: {
+						'color': 'white',
+						'h1': {
+							'color': 'white',
+						},
+						'h2': {
+							'color': '#FF33DE',
+						},
+						'h3, h4': {
+							'color': 'white',
+						},
+						'a': {
+							'color': '#FF33DE',
+						},
+						'p , code , strong, li': {
+							'color': 'white',
+							'font-family': 'Lato, Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+						},
+					},
+				},
+			}),
+		},
+	},
+	plugins: [
+		require('@tailwindcss/typography'),
+	],
 };
