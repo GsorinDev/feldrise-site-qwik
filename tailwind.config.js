@@ -22,26 +22,26 @@ module.exports = {
 				'offer2': 'url("/images/offer2.webp")',
 			},
 			maxWidth: {
-				'desktop': '1440px',
+				desktop: '1440px',
 			},
 			backgroundSize: {
-				'full': 'auto 100%',
+				full: 'auto 100%',
 			},
 			typography: () => ({
 				dark: {
 					css: {
 						'color': 'white',
 						'h1': {
-							'color': 'white',
+							color: 'white',
 						},
 						'h2': {
-							'color': '#FF33DE',
+							color: '#FF33DE',
 						},
 						'h3, h4': {
-							'color': 'white',
+							color: 'white',
 						},
 						'a': {
-							'color': '#FF33DE',
+							color: '#FF33DE',
 						},
 						'p , code , strong, li': {
 							'color': 'white',
@@ -52,7 +52,5 @@ module.exports = {
 			}),
 		},
 	},
-	plugins: [
-		require('@tailwindcss/typography'),
-	],
+	plugins: [require('@tailwindcss/typography')],
 };

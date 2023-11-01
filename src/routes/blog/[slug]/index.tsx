@@ -10,16 +10,16 @@ export default component$(() => {
 	const postDetails = useComputed$(() => getPostBySlug(loc.params.slug));
 
 	return (
-		<article class="max-w-none flex flex-col break-normal prose prose-dark md:prose-xl-dark">
+		<article class="md:prose-xl-dark prose prose-dark flex max-w-none flex-col break-normal">
 			<section
-				class={cx('w-full py-12 md:py-24 px-8 lg:pr-[400px] flex justify-center items-center flex-col bg-cover bg-center bg-fixed')}
+				class={cx('flex w-full flex-col items-center justify-center bg-cover bg-fixed bg-center px-8 py-12 md:py-24 lg:pr-[400px]')}
 				style={{
 					backgroundImage: `url(${postDetails.value.data.banner})`,
 				}}
 			>
-				<div class="p-12 bg-[rgba(0,0,0,0.30)] shadow-lg backdrop-blur-lg rounded-md flex justify-center items-center max-w-7xl">
+				<div class="flex max-w-7xl items-center justify-center rounded-md bg-[rgba(0,0,0,0.30)] p-12 shadow-lg backdrop-blur-lg">
 					<h1
-						class="text-4xl font-bold underline decoration-primary decoration-[10px] underline-offset-[-5px] m-0"
+						class="m-0 text-4xl font-bold underline decoration-primary decoration-[10px] underline-offset-[-5px]"
 						style={{
 							textDecorationSkipInk: 'none',
 						}}
@@ -28,14 +28,15 @@ export default component$(() => {
 					</h1>
 				</div>
 			</section>
-			<p class="w-full my-4 p-4 px-12 lg:pr-[400px] text-lg text-white bg-primary">
+			<p class="my-4 w-full bg-primary p-4 px-12 text-lg text-white lg:pr-[400px]">
 				<span class="max-w-7xl">
-					<a class="text-white" href="/blog">Accueil</a> &gt; {postDetails.value.data.title}
+					<a class="text-white" href="/blog">
+						Accueil
+					</a>{' '}
+					&gt; {postDetails.value.data.title}
 				</span>
 			</p>
-			<section
-				class="w-full px-12 lg:pr-[400px] flex justify-center items-center flex-col bg-cover bg-center"
-			>
+			<section class="flex w-full flex-col items-center justify-center bg-cover bg-center px-12 lg:pr-[400px]">
 				<QMarkdown details={postDetails.value.content} />
 			</section>
 		</article>
@@ -65,6 +66,5 @@ export const head: DocumentHead = {
 			name: 'og:image',
 			content: 'https://feldrise.com/logo-feldrise/icon-white-logo.png',
 		},
-
 	],
 };

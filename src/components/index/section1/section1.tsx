@@ -4,12 +4,14 @@ import Projects from './projects';
 
 export default component$(() => {
 	return (
-		<section class="
-			w-full
-			py-12 md:py-24
-			flex flex-col items-center justify-center gap-16
-			bg-header bg-cover bg-center bg-fixed
-		">
+		<section
+			class="
+			flex
+			w-full flex-col
+			items-center justify-center gap-16 bg-header bg-cover
+			bg-fixed bg-center py-12 md:py-24
+		"
+		>
 			<Header />
 			<Projects />
 		</section>

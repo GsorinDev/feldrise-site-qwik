@@ -34,11 +34,7 @@ export function getPostBySlug(slug: string): TypeBlogDetails {
  */
 export function getAllPosts(): TypeBlogDetails[] {
 	const slugs = getPostSlugs();
-	const posts = slugs
-		.map((slug) => getPostBySlug(slug))
-		.sort((post1, post2) =>
-			new Date(post1.data.date) > new Date(post2.data.date) ? -1 : 1,
-		);
+	const posts = slugs.map(slug => getPostBySlug(slug)).sort((post1, post2) => (new Date(post1.data.date) > new Date(post2.data.date) ? -1 : 1));
 
 	return posts;
 }

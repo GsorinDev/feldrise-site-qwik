@@ -10,17 +10,19 @@ interface IBlogPreviewProps {
 	tags: string[];
 }
 
-export default component$<IBlogPreviewProps>((props) => {
+export default component$<IBlogPreviewProps>(props => {
 	return (
 		<a href={`/blog/${props.slug}`}>
-			<div class="
-				max-w-[320px]
-				flex flex-col
-				pb-10
-				text-whiteoverflow-hidden shadow-lg gap-4
-				border border-[1px] border-secondary
-				rounded-2xl hover:cursor-pointer  transition ease-in-out duration-200 hover:scale-100
-			">
+			<div
+				class="
+				text-whiteoverflow-hidden
+				flex max-w-[320px]
+				flex-col
+				gap-4 rounded-2xl border
+				border-[1px] border-secondary pb-10
+				shadow-lg transition  duration-200 ease-in-out hover:scale-100 hover:cursor-pointer
+			"
+			>
 				<img
 					width={400}
 					height={200}
@@ -32,19 +34,15 @@ export default component$<IBlogPreviewProps>((props) => {
 						height: 'auto',
 					}}
 				/>
-				<div class="flex flex-wrap justify-starts items-center mt-6 px-6 mb-6">
-					{props.tags.map((tag) => (
+				<div class="justify-starts mb-6 mt-6 flex flex-wrap items-center px-6">
+					{props.tags.map(tag => (
 						<ArticleTag title={tag} key={tag} />
 					))}
 				</div>
 
-				<div class="text-secondary font-[800] text-xl lg:text-2xl px-6 py-2">
-					{props.title}
-				</div>
-				<div class="line-clamp-3 font-light px-6">
-					{props.description}
-				</div>
-				<div class="font-medium px-6">{props.date}</div>
+				<div class="px-6 py-2 text-xl font-[800] text-secondary lg:text-2xl">{props.title}</div>
+				<div class="line-clamp-3 px-6 font-light">{props.description}</div>
+				<div class="px-6 font-medium">{props.date}</div>
 			</div>
 		</a>
 	);

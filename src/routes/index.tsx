@@ -7,10 +7,12 @@ import Section4 from '~/components/index/section4/section4';
 
 export default component$(() => {
 	return (
-		<main class="
-			w-full
-			flex flex-col justify-center items-center
-		">
+		<main
+			class="
+			flex
+			w-full flex-col items-center justify-center
+		"
+		>
 			<Section1 />
 			<Section2 />
 			<Section3 />
@@ -42,6 +44,5 @@ export const head: DocumentHead = {
 			name: 'og:image',
 			content: 'https://feldrise.com/logo-feldrise/icon-white-logo.png',
 		},
-
 	],
 };

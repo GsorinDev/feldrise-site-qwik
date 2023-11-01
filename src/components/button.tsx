@@ -5,15 +5,12 @@ interface IButtonProps {
 	href?: string;
 	className?: string;
 	type?: 'button' | 'submit' | 'reset';
-    buttonStyle?: 'primary' | 'secondary';
+	buttonStyle?: 'primary' | 'secondary';
 	onClick?: () => void;
 }
 
-export default component$<IButtonProps>((props) => {
-	let className = cx(
-		'w-fit px-8 py-2 duration-300 rounded-md text-xl text-center',
-		props.className,
-	);
+export default component$<IButtonProps>(props => {
+	let className = cx('w-fit px-8 py-2 duration-300 rounded-md text-xl text-center', props.className);
 
 	if (props.buttonStyle == 'secondary') {
 		className += ' bg-white text-primary hover:bg-primary-dark hover:text-white';
@@ -26,11 +23,7 @@ export default component$<IButtonProps>((props) => {
 			<Slot />
 		</a>
 	) : (
-		<button
-			class={className}
-			type={props.type}
-			onClick$={props.onClick}
-		>
+		<button class={className} type={props.type} onClick$={props.onClick}>
 			<Slot />
 		</button>
 	);

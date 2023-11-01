@@ -3,10 +3,10 @@ import Sidebar from '~/components/blog/sidebar';
 
 export default component$(() => {
 	return (
-		<main class="w-full flex flex-col items-left">
-			<div class="hidden lg:block w-full sticky top-28 bottom-28">
+		<main class="items-left flex w-full flex-col">
+			<div class="sticky bottom-28 top-28 hidden w-full lg:block">
 				<div class="absolute right-8 w-[324px]">
-					<div class="flex items-center justify-center mt-16 p-8  bg-[rgba(0,0,0,0.30)] shadow-lg backdrop-blur-lg rounded-md">
+					<div class="mt-16 flex items-center justify-center rounded-md  bg-[rgba(0,0,0,0.30)] p-8 shadow-lg backdrop-blur-lg">
 						<Sidebar />
 					</div>
 				</div>

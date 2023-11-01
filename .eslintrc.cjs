@@ -5,12 +5,7 @@ module.exports = {
 		es2021: true,
 		node: true,
 	},
-	extends: [
-		'eslint:recommended',
-		'plugin:@typescript-eslint/recommended',
-		'plugin:qwik/recommended',
-		'google',
-	],
+	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:qwik/recommended', 'google', 'prettier'],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		tsconfigRootDir: __dirname,
@@ -44,6 +39,6 @@ module.exports = {
 		'no-tabs': 'off',
 		'linebreak-style': 'off',
 		'indent': ['error', 'tab'],
-		'max-len': ['error', {'code': 160}],
+		'max-len': ['error', {code: 160}],
 	},
 };

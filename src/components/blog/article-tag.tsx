@@ -1,7 +1,7 @@
 import {component$} from '@builder.io/qwik';
 
 interface IArticleTagProps {
-  title: string;
+	title: string;
 }
 
 const tagBaseStyle = 'text-xs mr-2 py-1.5 px-4 text-black-600 rounded-2xl';
@@ -20,8 +20,6 @@ const textsStyles: any = {
 	GCP: `${tagBaseStyle}  bg-rose-100  text-rose-600`,
 };
 
-export default component$<IArticleTagProps>((props) => {
-	return (
-		<div class={textsStyles[`${props.title}`]}>{props.title}</div>
-	);
+export default component$<IArticleTagProps>(props => {
+	return <div class={textsStyles[`${props.title}`]}>{props.title}</div>;
 });

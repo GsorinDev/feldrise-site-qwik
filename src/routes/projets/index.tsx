@@ -5,7 +5,7 @@ import Projects from '~/components/projets/projects';
 
 export default component$(() => {
 	return (
-		<main class="w-full flex flex-col justify-center items-center">
+		<main class="flex w-full flex-col items-center justify-center">
 			<Header />
 			<Projects />
 		</main>
@@ -17,7 +17,7 @@ export const head: DocumentHead = {
 	meta: [
 		{
 			name: 'description',
-			content: 'Vous trouverez une liste de projets que Feldrise a pu accompanger jusqu\'a présent.',
+			content: "Vous trouverez une liste de projets que Feldrise a pu accompanger jusqu'a présent.",
 		},
 		{
 			name: 'og:title',
@@ -25,7 +25,7 @@ export const head: DocumentHead = {
 		},
 		{
 			name: 'og:description',
-			content: 'Vous trouverez une liste de projets que Feldrise a pu accompanger jusqu\'a présent.',
+			content: "Vous trouverez une liste de projets que Feldrise a pu accompanger jusqu'a présent.",
 		},
 		{
 			name: 'og:url',
@@ -35,6 +35,5 @@ export const head: DocumentHead = {
 			name: 'og:image',
 			content: 'https://feldrise.com/logo-feldrise/icon-white-logo.png',
 		},
-
 	],
 };
