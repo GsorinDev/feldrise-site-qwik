@@ -68,6 +68,8 @@ export default component$(() => {
 								Comment fonctionne l'accompagnement ?
 							</h3>
 
+							<p>Vous voulez en discuter avec un de nos CTO ? Rendez-vous dans <a class="text-primary" href="https://app.gather.town/app/0raFgE4sC0iW2rE4/Feldrise" target='_blank'>nos bureaux virtuels</a></p>
+
 							{/* #1 */}
 							<div class="flex flex-col gap-4">
 								<h4 class="text-2xl font-bold">

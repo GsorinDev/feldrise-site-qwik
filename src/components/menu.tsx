@@ -20,6 +20,10 @@ const routes: IRoute[] = [
 		name: 'Le Blog',
 		href: '/blog',
 	},
+	{
+		name: 'Nos bureux virtuels',
+		href: "https://app.gather.town/app/0raFgE4sC0iW2rE4/Feldrise",
+	},
 ];
 
 export default component$(() => {

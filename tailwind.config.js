@@ -11,6 +11,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				'cats': 'url("/cats-background.svg")',
+				'office': 'url("/images/gather.webp")',
 				'header': 'url("/images/header.webp")',
 				'header-projects': 'url("/images/header-projects.webp")',
 				'header-blog': 'url("/images/header-blog.webp")',
