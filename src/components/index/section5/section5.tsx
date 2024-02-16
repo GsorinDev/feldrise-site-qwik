@@ -7,6 +7,7 @@ export default component$(() => {
 			class="
 			flex
 			w-full items-center justify-center
+			border-t-[32px] border-primary
 			bg-cats bg-cover bg-fixed
 		"
 		>
@@ -14,7 +15,7 @@ export default component$(() => {
 				class="
 				flex
 				max-w-desktop flex-col
-				items-center justify-center gap-16 px-24 py-8
+				items-center justify-center gap-16 px-24 py-16
 			"
 			>
 				<h2
